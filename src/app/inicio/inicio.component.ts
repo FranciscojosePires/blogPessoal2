@@ -24,11 +24,14 @@ export class InicioComponent implements OnInit {
   listaTemas: Tema[]
   idTema: number
 
-  constructor() { }
-     private router: Router
-     private postagemService: PostagemService
-     private temaService: TemaService
+  constructor(
+    private router: Router,
+     private postagemService: PostagemService,
+     private temaService: TemaService,
      private authService:AuthService
+     
+     ) { }
+     
   ngOnInit(){
     if (environment.token == ''){
       alert('Sua seção expirou, faça o login novamente')
