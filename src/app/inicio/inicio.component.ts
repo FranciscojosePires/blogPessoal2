@@ -20,7 +20,7 @@ export class InicioComponent implements OnInit {
   user: User = new User()
   idUser = environment.id
   
-  listasPostagens: Postagem[]
+  listaPostagens: Postagem[]
   listaTemas: Tema[]
   idTema: number
 
@@ -52,7 +52,7 @@ findByIdTema(){
 
 getAllPostagens(){
   this.postagemService.getAllPostagens().subscribe((resp:Postagem [])=>{
-    this.listasPostagens = resp
+    this.listaPostagens = resp
   })
 }
 
