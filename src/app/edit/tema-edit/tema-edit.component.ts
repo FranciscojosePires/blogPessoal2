@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-tema-edit',
-  templateUrl: './tema-edit.component.html',
+  templateUrl:'./tema-edit.component.html',
   styleUrls: ['./tema-edit.component.css']
 })
 export class TemaEditComponent implements OnInit {
