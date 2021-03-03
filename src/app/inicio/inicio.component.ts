@@ -20,6 +20,7 @@ export class InicioComponent implements OnInit {
   tema: Tema = new Tema()
   user: User = new User()
   idUser = environment.id
+  tituloPost: string
 
   key ='data'
   reverse = true
@@ -27,6 +28,7 @@ export class InicioComponent implements OnInit {
   listasPostagens: Postagem[]
   listaTemas: Tema[]
   idTema: number
+  nomeTema:string
 
   constructor(
     private router: Router,
@@ -86,4 +88,24 @@ publicar(){
 
 }
 
+findByTituloPostagem(){
+  if(this.tituloPost == ''){
+    this.getAllPostagens()
+  }else{
+    this.postagemService.getBYTituloPostagem(this.tituloPost).subscribe((resp:Postagem[])=>{
+      this.listasPostagens = resp
+    })
+  }
+}
+
+
+findByNomeTema(){
+  if (this.nomeTema == '') {
+    this.getAllTema()
+  }else{
+    this.temaService.getByNomeTema(this.nomeTema).subscribe((resp:Tema[])=>{
+      this.listaTemas = resp
+    })
+   }
+  }
 }
