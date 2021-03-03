@@ -10,9 +10,9 @@ export class AlertasService {
   constructor(
     private bsModalService: BsModalService
   ) { }
-  private showAlert(menssage:string,tipo:String){
+  private showAlert(menssage:string,type:String){
     const bsModalResf: BsModalRef=this.bsModalService.show(AlertasComponent)
-    bsModalResf.content.type=tipo
+    bsModalResf.content.type=type
     bsModalResf.content.message=menssage
   }
   showAlertDanger(menssage:string){
