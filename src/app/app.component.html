@@ -1,1 +1,7 @@
-<h1>Ola mundo </h1>git 
+  <app-menu *ngIf='auth.logado()' ></app-menu> 
+<!-- <app-rodape></app-rodape>  -->
+<!-- <app-entrar></app-entrar> -->
+<!-- <app-cadastrar></app-cadastrar> -->
+<router-outlet></router-outlet>
+
+<app-rodape *ngIf='auth.logado()'></app-rodape>
